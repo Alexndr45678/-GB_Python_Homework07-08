@@ -2,14 +2,14 @@ def read_data() -> dict:
     pass
 
 
-# dct = {
-#     'num1': '2',
-#     'num2': '3',
-#     'operator': '+',
-#     'final': '5',
-#     'isComplex1': True,
-#     'isComplex2': True,
-# }
+dct = {
+    'num1': '2',
+    'num2': '3',
+    'operator': '+',
+    'final': '5',
+    'isComplex1': True,
+    'isComplex2': True,
+}
 
 
 def print_data(a: dict):
