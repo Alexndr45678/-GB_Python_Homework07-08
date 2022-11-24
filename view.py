@@ -33,6 +33,7 @@ def read_data(dct) -> dict:
 
     return dct
 
+
 def print_data(dct):
     print(f"{dct['num1']} {dct['operator']} {dct['num2']} = {dct['result']}")
     repeat = input(

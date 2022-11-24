@@ -1,7 +1,9 @@
-from view import FirstNum,MathAction,SecondNum
+from view import FirstNum, MathAction, SecondNum
 
 # 1 вариант
-def calculate(dct: dict)-> dict:
+
+
+def calculate(dct: dict) -> dict:
     if MathAction == '+':
         print('{} + {} = {}'.format(FirstNum, SecondNum))
     elif MathAction == '-':
