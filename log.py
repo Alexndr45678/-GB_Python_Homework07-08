@@ -1,4 +1,9 @@
-# from view import read_data
+from view import read_data
+from datetime import datetime
 
-def log(a: dict):
-    pass
+
+def result_log(dct: dict):
+    time = datetime.now().strftime('%H:%M:%S')
+    with open('log.csv', 'a') as file:
+        file.write('{}{}'
+                   .format(time, dct['result']))
