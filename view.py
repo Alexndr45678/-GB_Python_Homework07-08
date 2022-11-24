@@ -6,7 +6,7 @@ dct = {
     'num1': '2',
     'num2': '3',
     'operator': '+',
-    'final': '5',
+    'result': '5',
     'isComplex1': True,
     'isComplex2': True,
 }
