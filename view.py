@@ -1,3 +1,4 @@
+from mathRational import calculate
 def read_data() -> dict:
     dct = {
     'FirstNum': '',
