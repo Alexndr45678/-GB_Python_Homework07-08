@@ -1,9 +1,6 @@
 def read_data(dct) -> dict:
     print("Приветствуем Вас в калькуляторе Python")
 
-    FirstNum = float(input("Введите первое число: "))
-    SecondNum = float(input("Введите второе число: "))
-
     operator = False
     while not operator:
         try:
@@ -19,6 +16,10 @@ def read_data(dct) -> dict:
                 print('Нужно ввести корректный оператор\n')
         except ValueError:
             print('Нужно ввести корректный оператор\n')
+
+    FirstNum = float(input("Введите первое число: "))
+    if MathAction != '^':
+        SecondNum = float(input("Введите второе число: "))
 
     dct = {
         'num1': '',
