@@ -43,3 +43,4 @@ def print_data(dct):
     elif repeat.upper() == 'N':
         print('До свидания.')
         exit()
+    return dct
