@@ -62,9 +62,9 @@ def subComplex(dct: dict) -> dict:
     return dct
 
 
-dct = {
-    'num1': '2.6i',
-    'num2': '3.6i'
-}
+# dct = {
+#     'num1': '2.6i',
+#     'num2': '3.6i'
+# }
 
-print(subComplex(dct))
+# print(subComplex(dct))
