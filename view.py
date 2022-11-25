@@ -10,9 +10,7 @@ def read_data() -> dict:
         'result': '',
     }
 
-    first_num = float(input('\nВведите рациональное или мнимое число: '))
-    if first_num % 1 == 0:
-        first_num = int(first_num)
+    first_num = input('\nВведите рациональное или мнимое число: ')
 
     operator = False
     while not operator:
@@ -31,9 +29,7 @@ def read_data() -> dict:
             print('Нужно ввести корректный оператор\n')
 
     if math_action != '^':
-        second_num = float(input('Введите второе число: '))
-        if second_num % 1 == 0:
-            second_num = int(second_num)
+        second_num = input('Введите второе число: ')
         dct['num2'] = second_num
     else:
         dct['num2'] = '2'
