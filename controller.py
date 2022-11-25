@@ -1,6 +1,39 @@
-def is_complex(dct: dict):
-    print(dct['num1'][-1])
-    if str(dct['num1'])[-1] == 'i' or str(dct['num2'])[-1] == 'i':
-        print('complex')
+from view import read_data, print_data, welcome
+from mathRational import calculate
+from mathComplex import calculate_complex
+from log import result_log
+
+
+def is_complex(dct: dict) -> bool:
+    complex_number = False
+    if dct['operator'] != '^':
+        if str(dct['num1'])[-1] == 'i' or str(dct['num2'])[-1] == 'i':
+            complex_number = True
+        else:
+            complex_number = False
     else:
-        print('rational')
+        if str(dct['num1'])[-1] == 'i':
+            complex_number = True
+        else:
+            complex_number = False
+    return complex_number
+
+
+def calc():
+    welcome()
+    end = False
+    while not end:
+        dct = read_data()
+        if is_complex(dct):
+            dct_result = calculate_complex(dct)
+        else:
+            dct_result = calculate(dct)
+        result_log(dct_result)
+        print_data(dct_result)
+
+        repeat = input(
+            'Хотите продолжить работу? Введите Y для продолжения ')
+        if repeat.upper() != 'Y':
+            end = True
+
+    print('До свидания.')
