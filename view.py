@@ -32,11 +32,13 @@ def read_data() -> dict:
 
     if math_action != '^':
         second_num = float(input('Введите второе число: '))
-    if second_num % 1 == 0:
-        second_num = int(second_num)
+        if second_num % 1 == 0:
+            second_num = int(second_num)
+        dct['num2'] = second_num
+    else:
+        dct['num2'] = '2'
 
     dct['num1'] = first_num
-    dct['num2'] = second_num
     dct['operator'] = math_action
 
     return dct
