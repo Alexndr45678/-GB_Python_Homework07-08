@@ -1,4 +1,4 @@
-from view import read_data, print_data, welcome
+from view import read_data, print_data, welcome, is_repeat
 from mathRational import calculate
 from mathComplex import calculate_complex
 from log import result_log
@@ -31,9 +31,6 @@ def calc():
         result_log(dct_result)
         print_data(dct_result)
 
-        repeat = input(
-            'Хотите продолжить работу? Введите Y для продолжения ')
-        if repeat.upper() != 'Y':
-            end = True
+        end = is_repeat()
 
     print('До свидания.')

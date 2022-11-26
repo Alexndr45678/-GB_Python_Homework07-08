@@ -42,3 +42,12 @@ def read_data() -> dict:
 
 def print_data(dct: dict):
     print(f"{dct['num1']} {dct['operator']} {dct['num2']} = {dct['result']}\n")
+
+
+def is_repeat():
+    repeat = input(
+        'Введите Y для повторения вычислений, или что угодно для выхода из калькулятора ')
+    if repeat.upper() != 'Y':
+        return True
+    else:
+        return False
