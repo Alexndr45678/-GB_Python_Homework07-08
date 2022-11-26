@@ -6,7 +6,10 @@ def calculate(dct: dict) -> dict:
     elif dct['operator'] == '*':
         dct['result'] = is_float(float(dct['num1']) * float(dct['num2']))
     elif dct['operator'] == '/':
-        dct['result'] = is_float(float(dct['num1']) / float(dct['num2']))
+        if (float(dct['num2']) == 0):
+            dct['result'] = 'На нуль делить нельзя'
+        else:
+            dct['result'] = is_float(float(dct['num1']) / float(dct['num2']))
     elif dct['operator'] == '^':
         dct['result'] = is_float(float(dct['num1']) * float(dct['num1']))
     return dct
